@@ -4,20 +4,16 @@ abstract class Model
 {
 
     protected const TABLE = '';
-
-public int $id;
+    public int $id;
 
     public static function findAll(): array
     {
         $db = Db::instance();
         $sql = 'SELECT * FROM ' . static::TABLE;
-        $data = $db->query($sql, static::class);
+        return $db->query($sql, static::class);
 
-        if ( is_object($data[0])  ) {
-            $data = $data[0];
-            return $data;
-        }
     }
+
 
     public function findById(): object
     {

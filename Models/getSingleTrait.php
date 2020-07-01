@@ -8,7 +8,6 @@
 
 namespace Models;
 
-
 trait getSingleTrait
 {
     public function getSingle(): object

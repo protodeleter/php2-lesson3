@@ -19,12 +19,16 @@
             <th> Автор </th>
         </tr>
 
-        <?php foreach ($this->news as $news) : ?>
+        <?php
+
+//        var_dump ($this->news);
+
+        foreach ($this->news as $news) : ?>
         <tr>
             <td><?php echo $news->id; ?></td>
             <td><?php echo $news->Title; ?></td>
             <td><?php echo $news->Content; ?></td>
-            <td><?php echo $news->Content; ?></td>
+            <td><?php echo $news->author->name; ?></td>
         </tr>
         <?php endforeach; ?>
     </table>
