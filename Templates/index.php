@@ -14,33 +14,21 @@
     <table class="table table-striped">
         <tr>
             <th>ID</th>
-            <th>Наименование</th>
-            <th>Цена</th>
+            <th> Заголовок </th>
+            <th> Контент </th>
+            <th> Автор </th>
         </tr>
-        <?php foreach ($this->products as $product) : ?>
+
+        <?php foreach ($this->news as $news) : ?>
         <tr>
-            <td><?php echo $product->id; ?></td>
-            <td><?php echo $product->title; ?></td>
-            <td><?php echo sprintf('%0.2f', $product->price); ?></td>
+            <td><?php echo $news->id; ?></td>
+            <td><?php echo $news->Title; ?></td>
+            <td><?php echo $news->Content; ?></td>
+            <td><?php echo $news->Content; ?></td>
         </tr>
         <?php endforeach; ?>
     </table>
 
-    <h1>Услуги</h1>
-    <table class="table table-striped">
-        <tr>
-            <th>ID</th>
-            <th>Наименование</th>
-            <th>Цена</th>
-        </tr>
-        <?php foreach ($this->services as $service) : ?>
-            <tr>
-                <td><?php echo $service->id; ?></td>
-                <td><?php echo $service->title; ?></td>
-                <td><?php echo sprintf('%0.2f', $service->price); ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
 
 </body>
 </html>

@@ -2,22 +2,8 @@
 
 class View implements Countable
 {
-    protected array $data = [];
 
-    public function __set($name, $value)
-    {
-        $this->data[$name] = $value;
-    }
-
-    public function __get($name)
-    {
-        return $this->data[$name] ?? null;
-    }
-
-    public function __isset($name)
-    {
-        return isset($this->data[$name]);
-    }
+    use \Models\get_set_trait;
 
     public function display(string $template)
     {
